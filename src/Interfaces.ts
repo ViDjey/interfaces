@@ -1,3 +1,5 @@
+import { info } from 'console';
+
 export interface IPersonData {
     name: string;
     secondName: string;
@@ -11,7 +13,7 @@ export function getPerson(): IPersonData {
     return {
         name: 'Petr',
         secondName: 'Smith',
-        age: '7',
+        age: 7,
     };
 }
 
@@ -27,6 +29,22 @@ export interface IStudentData {
 Данные должны храниться в объектах, соответствующих интерфейсу `IStudentData`.
  */
 export function getStudentsData(): IStudentData[] {
+    const info: IStudentData[] = [
+        {
+            name: 'Ivan',
+            secondName: 'Petrov',
+            age: 20,
+            phone: '+7(555)555-55-50',
+        },
+        {
+            name: 'Stepan',
+            secondName: 'Petrov',
+            age: 19,
+            phone: '+7(555)555-55-51',
+        },
+        { name: 'Petr', secondName: 'Ivanov', age: 19 },
+    ];
+    return info;
     /**
      * Данные студентов которые нужно передать:
      *
